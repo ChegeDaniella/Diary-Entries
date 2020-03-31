@@ -1,0 +1,26 @@
+<div class="container">
+    <h1>MY DIARY</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <app-diary-form></app-diary-form>
+        </div>
+    
+<div class ="col-md-6">
+    <div>
+    
+    
+        <div *ngFor =' let diary of diarys; let i = index'>
+            <div>
+                <h4>{{diary.name}}</h4>
+                <button (click)="toggleEntry(i)">Show Entry</button>
+            </div>
+            <div *ngIf="diary.showEntry">
+                    <app-diary-detail [diary] = 'diary' (isDelete) = 'deleteDiary($event,i)'></app-diary-detail>
+            </div >
+        </div>
+        
+    
+    </div>
+</div>    
+</div>
+</div>
