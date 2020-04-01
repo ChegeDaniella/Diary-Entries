@@ -5,19 +5,19 @@
         <div class="form-group">
   
             <label for="name">Name</label>
-            <input type="text" required class="form-control" id="name" [(ngModel)]="newEntry.name" name="name">
-            display{{newEntry.name}}
+            <input type="text" required class="form-control" id="name" #name='ngModel'[(ngModel)]="newEntry.name" name="name">
+            
   
         </div>
         <div class="form-group">
   
             <label for="notes">Diary Entry</label>
-            <textarea class="form-control" id="diaryEntry" rows="4" [(ngModel)]="newEntry.entry" name="entry"required></textarea>
+            <textarea class="form-control" id="diaryEntry" rows="4" #entry='ngModel' [(ngModel)]="newEntry.entry" name="entry"required></textarea>
             display{{newEntry.entry}}
         </div>
         <div class="form-group">
             <label for="dateEnter">Entry Date</label>
-            <input type='date' id="enterDate" [(ngModel)]="newEntry.entryDate" name="entryDate" required>
+            <input type='date' id="enterDate" [(ngModel)]="newEntry.entryDate" #entryDate='ngModel' name="entryDate" required>
         </div>
         <button type="submit" class="btn btn-success">Add Entry</button>
     </form>

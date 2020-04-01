@@ -9,7 +9,7 @@ import { Diary } from '../diary';
 })
 export class DiaryComponent implements OnInit {
   diarys:Diary[]=[
-    new Diary(1,"watch my weight","Workouts daily", new Date(2019,6,9))
+    
    ]
    toggleEntry(index){
      this.diarys[index].showEntry =!this.diarys[index].showEntry ;
@@ -25,9 +25,11 @@ export class DiaryComponent implements OnInit {
    }
    addNewEntry(diary){
      let diaryLength = this.diarys.length;
-     diary.id = diaryLength +1;
+     diary.id = diaryLength ++;
      diary.entryDate = new Date(diary.entryDate)
      this.diarys.push(diary)
+     console.log(this.diarys)
+     this.diarys.values();
 
    }
 
