@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { DiaryComponent } from './diary/diary.component';
 import { DiaryDetailComponent } from './diary-detail/diary-detail.component';
 import { DiaryFormComponent } from './diary-form/diary-form.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     DiaryComponent,
     DiaryDetailComponent,
-    DiaryFormComponent
+    DiaryFormComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

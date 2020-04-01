@@ -11,7 +11,7 @@
     
         <div *ngFor =' let diary of diarys; let i = index'>
             <div>
-                <h4>{{diary.name}}</h4>
+                <h4 appHighlight>{{diary.name}}</h4>
                 <button (click)="toggleEntry(i)">Show Entry</button>
             </div>
             <div *ngIf="diary.showEntry">
