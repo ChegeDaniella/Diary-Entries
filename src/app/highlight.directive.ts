@@ -9,7 +9,7 @@ export class HighlightDirective {
   constructor(private elem:ElementRef){}
 
   @HostListener("click") onClicks(){
-    this.color("yellow")
+    this.color("grey")
   }
 
   @HostListener("dblclick") onDoubleClicks(){

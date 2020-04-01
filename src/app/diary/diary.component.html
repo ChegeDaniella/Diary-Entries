@@ -2,20 +2,18 @@
     <h1>MY DIARY</h1>
     <div class="row">
         <div class="col-md-6">
-            <app-diary-form></app-diary-form>
+            <app-diary-form (addDiary)="addNewEntry($event)"></app-diary-form>
         </div>
     
 <div class ="col-md-6">
     <div>
-    
-    
         <div *ngFor =' let diary of diarys; let i = index'>
             <div>
-                <h4 appHighlight>{{diary.name}}</h4>
+                <h4 id={{i}} appHighlight>{{diary.name}} on {{diary.entryDate |date}}</h4>
                 <button (click)="toggleEntry(i)">Show Entry</button>
             </div>
             <div *ngIf="diary.showEntry">
-                    <app-diary-detail [diary] = 'diary' (isDelete) = 'deleteDiary($event,i)'></app-diary-detail>
+                    <app-diary-detail [diary] = 'diary' (toDelete) = 'deleteDiary($event,i)'></app-diary-detail>
             </div >
         </div>
         

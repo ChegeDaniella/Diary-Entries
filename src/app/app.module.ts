@@ -9,6 +9,7 @@ import { DiaryComponent } from './diary/diary.component';
 import { DiaryDetailComponent } from './diary-detail/diary-detail.component';
 import { DiaryFormComponent } from './diary-form/diary-form.component';
 import { HighlightDirective } from './highlight.directive';
+import { DateSetPipe } from './date-set.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HighlightDirective } from './highlight.directive';
     DiaryComponent,
     DiaryDetailComponent,
     DiaryFormComponent,
-    HighlightDirective
+    HighlightDirective,
+    DateSetPipe
   ],
   imports: [
     BrowserModule,
