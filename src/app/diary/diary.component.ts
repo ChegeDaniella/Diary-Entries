@@ -29,7 +29,7 @@ export class DiaryComponent implements OnInit {
      diary.entryDate = new Date(diary.entryDate)
      this.diarys.push(diary)
      console.log(this.diarys)
-     this.diarys.values();
+    //  this.diarys.values();
 
    }
 

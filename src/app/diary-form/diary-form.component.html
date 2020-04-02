@@ -3,11 +3,8 @@
     <hr>
     <form (ngsubmit)='submitDiary()' #diaryForm="ngForm">
         <div class="form-group">
-  
             <label for="name">Name</label>
             <input type="text" required class="form-control" id="name" #name='ngModel'[(ngModel)]="newEntry.name" name="name">
-            
-  
         </div>
         <div class="form-group">
   
