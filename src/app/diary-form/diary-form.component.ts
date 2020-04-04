@@ -14,6 +14,7 @@ export class DiaryFormComponent implements OnInit {
 
   submitDiary(){
     this.addDiary.emit(this.newEntry);
+    this. newEntry = new Diary(0,"","", new Date())
   }
 
   constructor() { }

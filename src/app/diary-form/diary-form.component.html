@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <h2 class="text-center">New Diary entry</h2>
     <hr>
-    <form (ngsubmit)='submitDiary()' #diaryForm="ngForm">
+    <form (ngSubmit)='submitDiary()' #diaryForm="ngForm">
         <div class="form-group">
             <label for="name">Name</label>
             <input type="text" required class="form-control" id="name" #name='ngModel'[(ngModel)]="newEntry.name" name="name">
